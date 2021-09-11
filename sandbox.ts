@@ -1,19 +1,24 @@
-let character = 'mario';
-let age = 30;
-let isBlackBelt = false;
+//arrays
+let names = ['luigi', 'mario', 'yoshi'];
 
-// character = 30; type number is not assignable to type 'string'
-character = 'Eddy';
+names.push('toad');
+// names.push(3); can't add a different type
 
-// age = '30'; string not assignable to number 
-age = 28;
 
-// isBlackBelt = 'yes'; string is not assignable to boolean 
-isBlackBelt = true;
+let mixed = ['string name ', 3, 4, false, true];
 
-const circ = (diameter: number) => {
-    return diameter * Math.PI;
-}
+mixed.push('this works');
+mixed.push(2); // also works 
 
-console.log(circ(32));
 
+// object 
+
+// changing the values within the object or creating another object after being initialize is okay as long as the types stay the same and has all the values. 
+let personObject = {
+    name: 'Eddy',
+    belt: 'black',
+    age: 27
+};
+
+
+personObject.age = 40;
