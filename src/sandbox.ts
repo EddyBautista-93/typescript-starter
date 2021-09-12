@@ -1,9 +1,5 @@
-let greet: Function;
+type StringOrNum = string|number;
 
-greet = () => console.log("Hello world");
+const logDetails = (uid: StringOrNum, item: string ):void => console.log(`${item} has a uid of ${uid}`);   
 
-const add = (a: number, b: number, c?: number|string):void => console.log(a + b, c);
-                                  // explicit return type
-const minus = (a:number, b:number):Number => a + b;
-// type becomes type of return value
-let result = minus(3, 1);
+const greet = (user: {name: string, uid: StringOrNum}):void => console.log(`${user.name} says hello`);
