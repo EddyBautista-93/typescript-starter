@@ -1,24 +1,38 @@
-//arrays
-let names = ['luigi', 'mario', 'yoshi'];
+// explicit types
 
-names.push('toad');
-// names.push(3); can't add a different type
-
-
-let mixed = ['string name ', 3, 4, false, true];
-
-mixed.push('this works');
-mixed.push(2); // also works 
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
 
 
-// object 
 
-// changing the values within the object or creating another object after being initialize is okay as long as the types stay the same and has all the values. 
-let personObject = {
-    name: 'Eddy',
-    belt: 'black',
-    age: 27
-};
+// arrays
+
+// initialize as a empty array to use array methods like push
+let strArray: string[];
+
+let numArray: number[];
 
 
-personObject.age = 40;
+// union types
+let mixed : (string|number)[] = [];
+mixed.push("hello")
+mixed.push("hi")
+mixed.push(123)
+mixed.push(.12)
+mixed.push(-2)
+
+console.log(mixed);
+
+// objects
+let personOne: object;
+
+personOne = { name: 'yoshie', age:20 };
+
+let PersonTwo: {
+    name: string,
+    age: number,
+    belt: string
+}
+
+PersonTwo = { name:"Eddy", age: 27, belt: "red"};
